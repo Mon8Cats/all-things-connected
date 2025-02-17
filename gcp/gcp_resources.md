@@ -114,7 +114,7 @@ Google Cloud resource are categorized based on their scope of availability.
 || Artifact Registry | Stores container images and artifacts. |
 || Cloud Deploy | Automated continuous delivery for GKE. |
 || Cloud Source Repository | Private Git Repositories. |
-|| Cloud Workstations | Cloud=based developer environments. |
+|| Cloud Workstations | Cloud based developer environments. |
 | Monitoring & Logging | | Observability tools for monitoring and debugging applications.|
 || Cloud Logging | Collects, monitors, and analyzes logs. |
 || Cloud Monitoring | Tracks performance and health of resources. |
@@ -161,7 +161,7 @@ Google Cloud resource are categorized based on their scope of availability.
 
 | Type | Service | Description |
 | :---: | :---: | :---: |
-| SaaS || GCP fully manages the service including infrastructure, scalability, security, and updates. Users simply consume the service. |
+| SaaS || GCP fully manages the service including infrastructure, scalability, security, and updates. Users simply consume the service. Application (from here) <- Runtime <- OS <- Virtualization <- Hardware <- Networking |
 || BigQuery ||
 || Google Workspace ||
 || Cloud PUb/Sub ||
@@ -186,7 +186,7 @@ Google Cloud resource are categorized based on their scope of availability.
 || Cloud Tasks || 
 || Eventarc ||
 || Cloud Workflows || 
-| IaaS || Users have control over infrastructure components like VMs, networking, storage, and security, while Google manages the underlying physical hardware. |
+| IaaS || Users have control over infrastructure components like VMs, networking, storage, and security, while Google manages the underlying physical hardware. Application <- Runtime <- OS (from here) <- Virtualization <- Hardware <- Networking |
 || Compute Engine ||
 || Persistent Disk ||
 || GKE ||
