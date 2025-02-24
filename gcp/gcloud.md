@@ -13,6 +13,13 @@ But some GCP services have specific CLI tools.
 ### Some Commands
 
 ```bash
+     gcloud config set project dole-dole
+     gcloud auth login # authorize my session?
+     gcloud auth list # all accounts authenticated with the gcloud
+
+
+
+
     gcloud group subgroup action ...
     gcloud --version
     gcloud init 
