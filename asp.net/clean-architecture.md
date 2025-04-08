@@ -19,3 +19,10 @@ Clean Architecture is a software design pattern that emphasizes separation of co
 - Maintainability: Separation of concerns makes code easy to update.
 - Testability: Unit tests can be written for each layer independently.
 - Flexibility: Swap infrastructure components (e.g., replace EF Core with Dapper).
+
+## Package Managers
+
+- NuGet for DotNet
+- Pip for Python
+- Npm for Nodejs
+  

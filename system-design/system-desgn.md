@@ -1,0 +1,31 @@
+# System Desing
+
+- Client-Server Architecture
+- IP Address
+- DNS
+- Proxy / Reverse PRoxy
+- HTTP/HTTPS
+- APIs
+- Rest API
+- GraphQL
+- Databases
+- SQL vs NoSQL
+- Vertical Scaling
+- Horizontal Scaling
+- Load Balancers
+- Database Indexing
+- Replication
+- Sharding (database sharding, horizontal partitioning, fewer rows)
+- Vertical Partitioning (fewer columns)
+- Caching
+- Denormalization
+- CAP Theorem (distributed system: Consistency, Availability, Partition Tolerance, CP, AP, CA)
+- Blob Storage (binary large object storage for unstructured date)
+- CDN
+- WebSockets (a persistent two-way communication channel, client initiated, continuous flow)
+- Webhooks (app to send event-driven notification, one-way, server-triggered)
+- Micro-services
+- Message Queues
+- Rate Limiting (prevent DDos)
+- API Gateways (a single entry point for all client requests to backend services)
+- Idempotent (multiple operations - same final state)

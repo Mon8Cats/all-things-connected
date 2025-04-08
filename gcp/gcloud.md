@@ -91,7 +91,7 @@ But some GCP services have specific CLI tools.
     gcloud builds submit --config=cloudbuild.yaml . 
 
 
-
+kubectl 
 ```
 
 ## Cloud Shell

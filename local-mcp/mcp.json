@@ -1,0 +1,31 @@
+{
+  "mcp_servers": [
+    {
+      "name": "code_generation_server",
+      "host": "http://localhost:8001",
+      "description": "Server optimized for code generation tasks.",
+      "models": ["codellama", "starcode"],
+      "tools": ["code_completion", "syntax_checking"],
+      "resources": ["python_documentation", "javascript_documentation"],
+      "keywords": ["code", "programming", "scripting", "develop"]
+    },
+    {
+      "name": "general_text_server",
+      "host": "http://localhost:8002",
+      "description": "General-purpose language model server.",
+      "models": ["llama2", "mistral"],
+      "tools": ["text_generation", "translation", "summarization"],
+      "keywords": ["text", "writing", "information", "general knowledge"]
+    },
+    {
+      "name": "data_analysis_server",
+      "host": "http://localhost:8003",
+      "description": "Server with models and tools for data analysis.",
+      "models": ["llama2"],
+      "tools": ["data_querying", "basic_analysis"],
+      "resources": ["pandas_documentation", "numpy_documentation"],
+      "keywords": ["data", "analysis", "statistics", "numbers"]
+    }
+    // ... more servers
+  ]
+}

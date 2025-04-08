@@ -1,0 +1,60 @@
+{
+  "version": "1.0",
+  "name": "Local File System Access",
+  "description": "Provides access to the local file system.",
+  "tools": [
+    {
+      "name": "readFile",
+      "description": "Reads the content of a file.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "filePath": {
+            "type": "string",
+            "description": "The path to the file to read."
+          }
+        },
+        "required": ["filePath"]
+      },
+      "handler": "readFileHandler"
+    },
+    {
+      "name": "writeFile",
+      "description": "Writes content to a file.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "filePath": {
+            "type": "string",
+            "description": "The path to the file to write to."
+          },
+          "content": {
+            "type": "string",
+            "description": "The content to write to the file."
+          }
+        },
+        "required": ["filePath", "content"]
+      },
+      "handler": "writeFileHandler"
+    },
+    {
+      "name": "listDirectory",
+      "description": "Lists the files and directories in a given directory.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "directoryPath": {
+            "type": "string",
+            "description": "The path to the directory to list."
+          }
+        },
+        "required": ["directoryPath"]
+      },
+      "handler": "listDirectoryHandler"
+    }
+  ],
+  "server": {
+    "port": 8080,
+    "host": "127.0.0.1"
+  }
+}
