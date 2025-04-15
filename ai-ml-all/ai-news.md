@@ -1,5 +1,52 @@
 # AI News
 
+- I-JEPA, cot, sgd, 
+
+
+## AI - World Model
+
+- understanding physical laws?
+- long-term memory, 
+- reasoning, 
+- planning,
+
+## MBRL (model-based reinforcement learning)
+
+## Diffusion and Auto-regression
+
+Deep Neural Network
+Curve fitting tasks
+Prediction - Curve fitting?
+Blurring Image - Many Labels - Average of Labels 
+Image with parts of missing - predict missing parts?
+Introduce Random Sampling?
+Auto-regression - it takes too long (one pixel a time)
+average - blurring effect 
+remove unrelated pixels
+removing , add back-ins
+instead of removing + adding noise -> ?
+scale down the original image and add noise
+de-nosing diffusion?
+Optimizations?
+Casual Architecture?
+Casual Con-volution Architecture
+Diffuse noise
+
+
+## TPU Ironwood
+
+TPU: 42.5 Exa-flops, the age of inference?
+Google Cloud Next 
+MoEs 
+FP8 for inference 
+NVDI: H200
+POD
+SparseCore?
+Interconnect?
+PodSize in Chip?
+HBM
+Bandwidth
+
 ## Summary
 
 ```bash

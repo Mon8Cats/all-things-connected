@@ -16,3 +16,9 @@ Can I get a wake-up call
 where is the front desk?
 Could you call the bellman?
 I have one carry-on.
+
+lost
+stole my stuff
+can I contact the embassy
+cain I file a report here
+Lost and found
