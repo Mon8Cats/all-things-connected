@@ -1,3 +1,72 @@
+# SQL ALL
+
+
+## Query Store
+
+The Query Store in SQL Server is a feature that acts like a flight data recorder for your database. Introduced in SQL Server 2016, it automatically captures a history of queries, execution plans, and runtime statistics, and retains this information for your review.   
+
+Here's a breakdown of what it is and why it's important:
+
+What it does:
+
+Captures Query History: It records the text of SQL queries that are executed against a database.   
+Stores Execution Plans: For each query, it stores the execution plans that were used. This includes both the initial plan and any subsequent plans that the query optimizer generates.   
+Tracks Runtime Statistics: It collects data on the performance of queries over time, such as execution count, duration, CPU time, memory consumption, and I/O operations.   
+Persists Data: Unlike the plan cache, which is cleared when the SQL Server instance restarts, Query Store data is persisted on disk within the database where it's enabled.
+Organizes by Time Windows: It separates the collected data into time windows, allowing you to analyze performance trends over specific periods.   
+Key Benefits of Using Query Store:
+
+Performance Troubleshooting: Quickly identify and fix performance regressions caused by query plan changes. If a query suddenly starts performing poorly after a deployment or an automatic plan change, you can use Query Store to see the previous, better-performing plan and potentially force SQL Server to use it again.   
+Plan Stability: You can enforce the use of a specific execution plan for a query. This is useful for critical queries where consistent performance is essential and you want to prevent the optimizer from choosing a suboptimal plan in the future.
+Identifying Top Resource Consuming Queries: Determine which queries are using the most CPU, memory, or I/O resources over a given period. This helps in identifying candidates for optimization.   
+A/B Testing: Compare the performance of queries before and after code changes, index modifications, or database upgrades.   
+Historical Analysis: Analyze query performance trends over time to understand database usage patterns and identify potential bottlenecks.   
+Auditing Query Plan Changes: Track the history of execution plans for a specific query.   
+Understanding Wait Statistics: In later versions of SQL Server (2017 and above), Query Store also captures wait statistics at the query level, helping you understand what resources queries are waiting on.   
+Informed Tuning: Provides data-driven insights to guide your query tuning efforts, such as identifying missing indexes or inefficient query patterns.   
+How to Enable Query Store:
+
+You can enable Query Store for a specific database using either SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL).   
+
+Using SQL Server Management Studio (SSMS):
+
+In Object Explorer, right-click on the database you want to enable Query Store for.
+Select Properties.
+In the Database Properties dialog box, select the Query Store page.
+Change the Operation Mode (Requested) to Read Write.
+Configure other settings as needed (e.g., Max Size (MB), Query Capture Mode, Stale Query Threshold (Days)).   
+Click OK.
+Using Transact-SQL (T-SQL):
+
+Open a new query window and execute the following command, replacing <database_name> with the actual name of your database:
+
+SQL
+
+ALTER DATABASE <database_name>
+SET QUERY_STORE = ON (OPERATION_MODE = READ_WRITE);
+You can also configure other options within the SET QUERY_STORE command, such as:
+
+SQL
+
+ALTER DATABASE <database_name>
+SET QUERY_STORE = ON (
+    OPERATION_MODE = READ_WRITE,
+    DATA_FLUSH_INTERVAL_SECONDS = 900, -- How often data is written to disk (default: 900 seconds/15 minutes)
+    MAX_STORAGE_SIZE_MB = 1024,       -- Maximum size of the Query Store in MB (default: 100 MB)
+    QUERY_CAPTURE_MODE = AUTO,        -- Determines which queries are captured (ALL, AUTO, NONE)
+    SIZE_BASED_CLEANUP_MODE = AUTO,   -- Enables automatic cleanup based on size
+    STALE_QUERY_THRESHOLD_DAYS = 30   -- Retention period for inactive queries (default: 30 days)
+);
+In summary, the Query Store is a valuable tool for database administrators and developers to understand query performance over time, troubleshoot regressions, and ensure consistent and efficient database operations.   
+
+
+Sources and related content
+
+
+
+--------------------------
+
+
 For beginning SQL learners, here's a breakdown of advice, focusing on building a strong foundation:
 
 1. Start with the Fundamentals:
