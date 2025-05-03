@@ -1,5 +1,26 @@
 # Logical or Critical Thinking
 
+## Five Strategies
+
+- beware confirmation bias
+- embrace nuance and complexity
+- practice intellectual humility 
+  - change my mind, 
+  - open to new perspective)
+- check my source 
+  - do research, 
+  - don't jump to conclusions
+- avoid fallacies 
+
+
+## Critical Thinking
+
+- thought -> internal action -> true/non true -> feedback
+- logical thinking
+- problem-solving skill
+- systemic approach
+- identify problems
+- effective solutions
 
 ## Steps
 

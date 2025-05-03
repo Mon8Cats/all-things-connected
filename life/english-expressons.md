@@ -1,5 +1,36 @@
 # English
 
+- alert
+- injury
+- accident
+- rescure
+- evacuate
+- first aid
+- emergency
+- ambulance
+- give up
+- give in
+- give out 
+- give off
+- give back
+- give away
+- dont' cut in
+- make a u trun
+- stop the car
+- traffic is heavy
+- i hit a red light
+- dont speed 
+- low on gas
+
+- what's on your mind?
+- cat got your tongue?
+- I'm bored
+- that's not like you
+- spacing out?
+- snap out of it
+- suit yourself
+
+
 Let's dig in
 Help yourself. Enjoy your meal.
 My mouth is watering

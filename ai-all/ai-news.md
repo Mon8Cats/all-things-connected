@@ -1,6 +1,11 @@
 # AI News
 
-- I-JEPA, cot, sgd, 
+## Open AI new
+
+- new model or system
+- chain of thought
+- real code basis
+- reasoning models + tools 
 
 
 ## AI - World Model

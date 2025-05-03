@@ -1,5 +1,30 @@
 # GCP Networking
 
+## Resources in the same VPC but different subnets using private IP addresses
+
+- Internal Routing: automatically creates routes that enable instances in different subnets to reach each other's private IP ranges.
+- Private IP addresses: a private IP address from the subnet IP ranges assigned to a resource
+- Firewall Rules: need to configure firewall rules to explicitly allow the specific traffic.
+  - configure ingress firewall rule on the destination
+  - configure egress firewall rule on the source
+
+## Resources in the same VPC and the same subnet: communication allowed by default
+
+- Local Subnet Routing: 
+- Implied Firewall Rules: 
+  - Default VPC networks: default-allow-internal
+  - Custom VPC networks: need to create an ingress firewall rule to explicitly allow
+
+
+
+
+
+
+
+
+
+
+
 - Beginner:
   - Preparing for Your Professional Cloud Network Engineer Journey
   - Google Cloud Fundamentals: Core Infrastructure
