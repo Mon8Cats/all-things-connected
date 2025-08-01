@@ -2,6 +2,62 @@
 
  The issue you're seeing—where the generated solution wraps everything inside an extra folder (e.g., MyTestSolution/)—is a common behavior when using .NET CLI or dotnet new templates, especially when preferNameDirectory is set to true.
 
+# template.json
+
+```bash
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Steve King",
+  "classifications": [ "Web", "ASP.NET Core", "MVC" ],
+  "identity": "MvcRepoTemplate.Template",
+  "name": "MvcRepoTemplate Clean Architecture Template",
+  "shortName": "MvcRepoTemplate",
+  "sourceName": "MvcRepoTemplate",
+  "preferNameDirectory": false,
+  "tags": {
+    "language": "C#",
+    "type": "solution"
+  }
+}
+```
+
+- "$schema": schema reference
+- "author": author name
+- "classification": keywords or categories to help finding template
+- "identity": a unique identifier for my template
+- "name": a long name of my template (used in crl)
+- "shortName": a concise name for myu template (used in crl)
+- "sourceName": what name in my source solution should replace with the name provided by the user
+- "preferNameDirectory": whether a new directory is created for the generated content
+- "tags": indicates that this template is designed to create an entire solution
+
+```bash
+dotnet new install . (in the directory that contains .tempate.config folder)
+.template.config/template.json
+
+MySoluton/
+  .template.config/
+    template.json
+  MySolution.sln
+  src/
+    MySolution.Web/
+    MySolution.Application/
+  tests/
+    MySolution.Tests/
+
+dotnet new list // list all available templates
+dotnet new list --language "C#" 
+dotnet new list --tag "Web"
+dotnet new list --author "Steve Kim"
+dotnet new <ShortNameTemplate> --help 
+dotnet new uninstall
+
+
+
+```
+
+
+
  ## Option 1: Set preferNameDirectory to false
 
 1. This prevents the template engine from wrapping everything in a folder named after the solution.
