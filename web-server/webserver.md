@@ -1,0 +1,45 @@
+# Web Server
+
+- Listen: IP address (like phone number)
+- On a port: like extension number (80, 443, 8000)
+  - multiple web servers on a machine - need port number
+- For a request: HTTP protocol = language
+- Transport protocol
+  - Get Example
+    - GET /orders/123 HTTP/1.1 -- method, target, http version
+    - Host: 127.0.0.1:8000 -- headers: key-value
+    - User-Agent: Manual-Http-Request
+    - Optional Body after line break
+  - Post example
+    - POST /orders HTTP/1.1
+    - Host: 127.0.0.1:8000
+    - User-Agent: Manual-Http-Request
+    - Content-Length: 12
+    - Context-Type: application/x-www...
+    - (line break)
+    - order_id=123 (body)
+- response
+  - how to send request
+  - application protocol (http, ftp) language
+  - transport protocol (TCP) voice <- language
+    - breaking data into packets (order?)
+  - response example
+    - HTTP/1.1 200 OK
+    - Content-Length: 88
+    - Content-Type: text/html // application/json, image/jpeg, 
+    - Connection: closed
+    - (line break)
+    - <!doctype html>
+    - <html lang="en">
+      - <head>
+        - <medat charset="utf-8">
+        - <title>Title</title>
+      - </head>
+      - <body>
+        - <h1>Hello, World!</h1>
+      - </body>
+    - </html>
+- resource
+  - static routing: 
+    - serving actual files out of a folder
+  - dynamic routing

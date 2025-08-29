@@ -1,0 +1,49 @@
+I am developing ASP.NET Core 8 MVC Application.
+I use Clean Architecture, CQRS (Meidiator) pattern, Repostiory Specification Pattern,
+Windows Authentication, Serilog.
+
+I use 5 layers: SharedKernel, Domain, Application. Infrastructure, MVC
+SharedKernel: Some cross layer classes are defined like
+	ISpecification, BaseSpecification, PaginatedList<T>
+Domain: Entities, Enum are defined.
+Application: Common interfaces, CustomMediator (not Mediatr), CustomMapper(not AutoMapper), DTOs
+   and Command, Query, their Handlers for each features.
+Infrastructure: EntityConfiguration classes, DbContext, Repostories are implemented.
+	Other services like File Service (Pdf, Excel), Mail Service are defined.
+MVC layer:
+	controllers, actions, views,
+	VMs, custom VM validators, 
+	middleware capture original URL for (404 errors), 
+	middleware to get login user id from AD and display on the Layout page
+	extentions to manipulate ModelState
+	Serilog is configured and used.
+
+The application is manage inventory items and 
+perform monthly inventory check for each facility
+
+There are three kind of inventory check types and many facilities.
+Each inventory check type has a list of inventory items.
+
+In the inventory check list page
+A user can filter check type and time range (month) -> then the list page shows 
+the check status for each facility with some action button.
+
+so user can enter/update/delete/detail the inventory check entry 
+(one/or a few entries per facility per month per type) 
+
+Also user can manange inventory check item list.
+Go to the check item page, and can add/edit/delete check items for each type.
+
+Also user can generate files (Excel, Pdf) for check Items or check monthly entry
+and send out email.
+User's Id are get from AD but additonal info (roles etc) are form SQL Server Data
+
+Also so we have existing data with different schema, so we create new tables and 
+validate existing data and migrate new tabel by tool or manual scripts.
+
+
+I also add a function -- there is a button in every page (Layout page), 
+when user click, then a sticky note like pop up and user can enter feedback about page and application, 
+the content is preserved even you move to the another page. 
+Then you can save then it saved into DB and cleared from the entry page. 
+The developer can check see the list of feedbacks and open one then respond accordingly. 	
