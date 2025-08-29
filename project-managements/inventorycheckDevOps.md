@@ -503,3 +503,217 @@ User Story 5.3.3: As a developer, I want to use the Repository Specification Pat
 
 User Story 5.3.4: As a developer, I want custom MVC View Model validators to be implemented, so that input data is consistently validated at the presentation layer.
 
+## Chat GPT result
+
+✅ Epic 1: Application Foundation & Architecture Setup
+
+This epic covers all foundational work for architecture, layers, patterns, and infrastructure.
+
+Features:
+
+Setup Solution and Project Structure
+
+Implement Clean Architecture Layers
+
+Configure Dependency Injection and Middleware
+
+Enable Windows Authentication
+
+Configure Logging with Serilog
+
+Database Setup and Migrations
+
+User Stories:
+
+As a developer, I want to create a Visual Studio solution with projects for SharedKernel, Domain, Application, Infrastructure, and MVC, so the architecture is clean and modular.
+
+As a developer, I want to register all services (repositories, mediators, mappers) in Dependency Injection so that I can inject dependencies across layers.
+
+As a developer, I want to enable Windows Authentication and extract the AD user info so that the logged-in user is identified.
+
+As a developer, I want to configure Serilog for structured logging (including request/response and errors) so that I can monitor application behavior.
+
+As a developer, I want to set up Entity Framework Core DbContext and initial code-first migrations for the new schema so that data persistence works.
+
+✅ Epic 2: Authentication & Authorization
+
+Focuses on Windows Authentication and role-based security.
+
+Features:
+
+Integrate Windows Authentication
+
+Role Management from SQL
+
+Middleware for User Context
+
+User Stories:
+
+As a user, I want to automatically log in using Windows Authentication so that I don’t need to enter credentials.
+
+As an admin, I want roles to be retrieved from SQL Server so that additional access control can be applied.
+
+As a developer, I want to implement a custom middleware to get the logged-in AD user and display their name on the layout page.
+
+✅ Epic 3: Inventory Check Management
+
+Core functionality to manage monthly inventory checks.
+
+Features:
+
+View and Filter Inventory Checks
+
+Create/Edit/Delete Inventory Check Entries
+
+Status Tracking for Each Facility
+
+Validation & Error Handling
+
+User Stories:
+
+As a user, I want to filter inventory checks by type and month so that I can see only relevant data.
+
+As a user, I want to create an inventory check entry for a facility so that I can record the monthly check.
+
+As a user, I want to update or delete an existing entry so that I can maintain accurate records.
+
+As a user, I want to view detailed information about an entry so that I can confirm correctness.
+
+As a user, I want to see status for each facility on the list page with action buttons so that I can quickly manage pending checks.
+
+✅ Epic 4: Inventory Check Item Management
+
+Manages the check items for each check type.
+
+Features:
+
+Check Item CRUD
+
+Link Items to Check Types
+
+Validation for Duplicates
+
+User Stories:
+
+As an admin, I want to add/edit/delete inventory check items for a check type so that I can manage what is checked during the process.
+
+As a user, I want validation to prevent duplicate items so that data integrity is maintained.
+
+✅ Epic 5: Reporting & Notifications
+
+Handles Excel/PDF generation and email notifications.
+
+Features:
+
+Generate Excel/PDF for Check Items
+
+Generate Excel/PDF for Monthly Entries
+
+Send Reports via Email
+
+User Stories:
+
+As a user, I want to export check items to Excel/PDF so that I can share or print them.
+
+As a user, I want to export monthly inventory entries to Excel/PDF for reporting.
+
+As a user, I want to send reports via email so that stakeholders can receive updates.
+
+✅ Epic 6: Feedback System
+
+Implements the sticky note pop-up for user feedback.
+
+Features:
+
+Feedback Popup on All Pages
+
+Persist Feedback in Database
+
+Developer Dashboard for Feedback
+
+User Stories:
+
+As a user, I want to click a button and open a sticky note so that I can enter feedback without leaving the page.
+
+As a user, I want my feedback to persist even when navigating to other pages so that I can complete it later.
+
+As a user, I want to save feedback so that developers can review it.
+
+As a developer, I want to view a list of feedback and respond so that user concerns are addressed.
+
+✅ Epic 7: Data Migration & Validation
+
+Handles existing data migration and validation.
+
+Features:
+
+Validate Existing Data Against New Schema
+
+Migrate Data to New Tables
+
+Provide Manual Scripts/Tooling for Migration
+
+User Stories:
+
+As a developer, I want to analyze existing data and validate it so that migration issues are minimized.
+
+As a developer, I want to migrate old data to the new schema using scripts or tools.
+
+As an admin, I want to review logs of migration so that I can confirm successful migration.
+
+✅ Epic 8: Logging, Monitoring & Error Handling
+
+Ensures observability and error resilience.
+
+Features:
+
+Centralized Logging with Serilog
+
+Custom Error Pages
+
+Capture 404 Original URL
+
+User Stories:
+
+As a developer, I want Serilog configured with sinks (File, DB, or Seq) so that logs are centralized.
+
+As a user, I want custom error pages so that I see friendly error messages.
+
+As a developer, I want a middleware that captures original URLs for 404 so that I can debug missing resources.
+
+✅ Epic 9: Specification Pattern & Pagination
+
+Implements Repository + Specification Pattern with pagination support.
+
+Features:
+
+ISpecification and BaseSpecification
+
+Repository Implementations
+
+PaginatedList<T> for MVC Layer
+
+User Stories:
+
+As a developer, I want to apply specifications for queries so that code is cleaner and testable.
+
+As a user, I want pagination on large lists so that the UI loads faster and is easier to navigate.
+
+✅ Epic 10: CI/CD and Deployment (Optional)
+
+Handles pipeline for builds and deployments.
+
+Features:
+
+Azure DevOps Pipeline for Build & Test
+
+Deployment to IIS or Azure App Service
+
+Environment Configuration Management
+
+User Stories:
+
+As a developer, I want automated builds and tests on each commit so that code quality is maintained.
+
+As a developer, I want deployment pipelines for staging and production so that delivery is consistent.
+
